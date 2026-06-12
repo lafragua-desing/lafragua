@@ -1,0 +1,423 @@
+<?php
+// inicio.php � P�gina inicial
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Peña Flamenca La Fragua</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="img/lafragua.png" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+    html, body, h1, h2, h3, h4 {
+        font-family: "Lato", sans-serif
+    }
+
+    .mySlides {
+        display: none
+    }
+
+    .w3-tag, .fa {
+        cursor: pointer
+    }
+
+    .w3-tag {
+        height: 15px;
+        width: 15px;
+        padding: 0;
+        margin-top: 6px
+    }
+        /* Div fijo */
+        .fijo {
+            position: fixed; /* Mantiene el div en la misma posición */
+            top: 0; /* Distancia desde la parte superior */
+            left: 0; /* Distancia desde la izquierda */
+            width: 100%; /* Ocupa todo el ancho */
+            /*background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;*/
+            z-index: 1000; /* Asegura que esté por encima de otros elementos */
+        }
+    .playwrite-au-vic-guides-regular {
+            font-family: "Playwrite AU VIC Guides", cursive;
+            font-weight: 100;
+            font-style: italic;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+VIC+Guides&display=swap');
+</style>
+
+    <script>
+        function chgImgRueda() {
+            const imagen1 = document.getElementById("imgRueda1");
+            const imagen2 = document.getElementById("imgRueda2");
+            const imagen3 = document.getElementById("imgRueda3");
+                // Comparar alto y ancho
+                if (imagen1.height > imagen1.width) {
+                    imagen1.style.width = "100%";
+                } else if (imagen1.width > imagen1.height) {
+                    imagen1.style.width = "100%";
+                } else {
+                    imagen1.style.width = "100%";
+                }
+                        // Comparar alto y ancho
+                if (imagen2.height > imagen2.width) {
+                    imagen2.style.width = "100%";
+                } else if (imagen2.width > imagen2.height) {
+                    imagen2.style.width = "100%";
+                } else {
+                    imagen2.style.width = "100%";
+                }
+                                    // Comparar alto y ancho
+                if (imagen3.height > imagen3.width) {
+                    imagen3.style.width = "100%";
+                } else if (imagen3.width > imagen3.height) {
+                    imagen3.style.width = "100%";
+                } else {
+                    imagen3.style.width = "100%";
+                }
+
+            }
+    </script>
+</head>
+<body onload="chgImgRueda()">
+
+    <!-- Links (sit on top) -->
+    <div class="fijo w3-top w3-animate-left">
+        <div class="w3-row w3-large w3-light-grey">
+            <div class="w3-col s3">
+                <a href="#" class="w3-button w3-block w3-hover-sepia">Inicio</a>
+            </div>
+            <div class="w3-col s3">
+                <a href="#plans" class="w3-button w3-block">Eventos</a>
+            </div>
+            <div class="w3-col s3">
+                <a href="#about" class="w3-button w3-block">Acerca de</a>
+            </div>
+            <div class="w3-col s3">
+                <a href="#contact" class="w3-button w3-block">Contacto</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="w3-content" style="max-width:1100px;margin-top:40px;margin-bottom:80px">
+
+        <div class="w3-panel playwrite-au-vic-guides-regular w3-animate-zoom" style="margin-top:5px !important">
+            <img src="img/PenaLaFraguaBellavista50.png" /><span style="font-size:x-large"> Una historia con 50 años</span>
+        </div>
+
+        <!-- Slideshow -->
+        <div class="w3-container">
+            <div class="w3-display-container mySlides w3-center w3-animate-zoom">
+                <img id="imgRueda1" src="/img/cartelFestival2026.webp" />
+                <p class="w3-animate-bottom">Presentación del cartel XLVI Festival Flamenco de La Fragua 2026</p>
+            </div>
+            <div class="w3-display-container mySlides w3-center w3-animate-zoom">
+                <img id="imgRueda2" src="/img/xlv-festival-de-flamenco-de-la-fragua-en-sevilla-2025.jpg" />
+                    <p class="w3-animate-bottom">Cartel XLV Festival Flamenco de La Fragua 2025</p>
+            </div>
+            <div class="w3-display-container mySlides w3-center w3-animate-zoom">
+                <img id="imgRueda3" src="/img/Festival2025.jpg" />
+                    <p class="w3-animate-bottom">Festival Flamenco La Fragua 2025</p>
+            </div>
+
+            <!-- Slideshow next/previous buttons -->
+            <div class="w3-container w3-dark-grey w3-padding w3-xlarge">
+                <div class="w3-left" onclick="plusDivs(-1);chgImgRueda()">
+                    <i class="fa fa-arrow-circle-left w3-hover-text-teal"></i>
+                </div>
+                <div class="w3-right" onclick="plusDivs(1);chgImgRueda()">
+                    <i class="fa fa-arrow-circle-right w3-hover-text-teal"></i>
+                </div>
+
+                <div class="w3-center">
+                    <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+                    <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+                    <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid -->
+        <div class="w3-row w3-container">
+            <div class="w3-center w3-padding-64">
+                <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">What We Offer</span>
+            </div>
+            <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+                <h3>Festival 2026</h3>
+                <p>El Ayuntamiento de Sevilla, a través del Área de Turismo y Cultura, ha presentado una nueva edición del Festival Flamenco de La Fragua, una de las citas "más emblemáticas" del calendario flamenco de la ciudad, que celebrará su 41ª edición el próximo 12 de junio en el Cortijo del Cuarto. Como novedad, algunos de los artistas del cartel interactuarán entre sí durante la velada, generando "momentos únicos" y especialmente concebidos para "enriquecer la experiencia del público asistente".</p>
+                <p>De esta manera, el Cortijo del Cuarto reunirá en esta edición a "destacadas" figuras del cante, el baile, el toque y el piano flamenco, ofreciendo al público "cuatro expresiones artísticas diferentes" dentro del arte jondo.</p>
+                <p>En el apartado del cante, actuarán la lebrijana Inés Bacán, una de las triunfadoras de la pasada Bienal de Flamenco, y Segundo Falcón, acompañados a la guitarra por Antonio Moya y Paco Jarana, respectivamente.</p>
+                <p>Del mismo modo, el baile llegará de la mano de la también lebrijana Concha Vargas, que estará acompañada por José El Pechuguita al cante, Antonio Moreno a la guitarra y El Petete a las palmas.
+
+En cuanto al resto del cartel, se completará con la actuación del pianista Pedro Ricardo Miño, "destacado músico trianero y vecino del barrio de Bellavista", donde se celebra esta actividad cultural.</p>
+            </div>
+
+            <div class="w3-col l3 m6 w3-grey w3-container w3-padding-16">
+                <h3>Lugar de celebración</h3>
+                <p>El Cortijo del Cuarto en Sevilla tiene una rica historia que se remonta a la época medieval. Este sitio es conocido por su Torre del Cuarto, una atalaya construida en el siglo XIII, que actualmente sirve de sede para la Asociación Nacional de Criadores de Caballos de Pura Raza Española (ANCCE). La Ermita de Nuestra Señora de Valme, situada al lado del Cortijo, también es un punto de referencia histórico importante en la zona.</p>
+                <p>El Cortijo Viejo del Cuarto es un ejemplo de la rica historia y patrimonio de Sevilla, y su conservación y uso son fundamentales para mantener la identidad cultural y natural de la ciudad. La Diputación Provincial de Sevilla ha trabajado en la recuperación y adecuación de la zona verde del Cortijo del Cuarto, lo que refleja el compromiso de la institución con la preservación del patrimonio histórico y la mejora del entorno urbano.</p>
+            </div>
+
+            <div class="w3-col l3 m6 w3-dark-grey w3-container w3-padding-16">
+                <h3>Consultation</h3>
+                <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+            </div>
+
+            <div class="w3-col l3 m6 w3-black w3-container w3-padding-16">
+                <h3>Promises</h3>
+                <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+            </div>
+        </div>
+
+        <div class="w3-container w3-padding w3-xlarge">
+            <div class="W3-etiqueta">
+                <a rel="tag" href="https://hoydiario.es/tag/flamenco.html" target="_blank">#flamenco</a>
+                <a rel="tag" href="https://hoydiario.es/tag/sevilla.html" target="_blank">#Sevilla</a>
+                <a rel="tag" href="https://hoydiario.es/tag/festival.html" target="_blank">#festival</a>
+                <a rel="tag" href="https://hoydiario.es/tag/cultura.html" target="_blank">#cultura</a>
+                <a rel="tag" href="https://hoydiario.es/tag/turismo.html" target="_blank">#Turismo</a>
+                <a rel="tag" href="https://hoydiario.es/tag/arte.html" target="_blank">#arte</a>
+                <a rel="tag" href="https://hoydiario.es/tag/penas-flamencas.html" target="_blank">#peñas flamencas</a>
+                <a rel="tag" href="https://hoydiario.es/tag/bienal-de-flamenco.html" target="_blank">#Bienal de Flamenco</a>
+            </div>
+        </div>
+
+        <!-- Grid -->
+        <div class="w3-row-padding" id="about">
+            <div class="w3-center w3-padding-64">
+                <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Quienes somos</span>
+            </div>
+
+            <div class="w3-third w3-margin-bottom">
+                <div class="w3-card-4">
+                    <div class="w3-container">
+                        <h3>HISTORIA</h3>
+                        <p class="w3-opacity">Tertulia</p>
+                        <img src="/img/LaPeña1.jpg" alt="Las Tertulias" style="width:100%" />
+                        <p>La Peña Flamenca La Fragua de Bellavista es una de las peñas flamencas con más solera de Sevilla. Aunque se encuentra en el extrarradio, siempre ha mantenido, desde hace más de 50 años, actividades constantes de difusión y promoción del arte flamenco ortodoxo. </p><p>Espectáculos, ciclos, cursos, talleres, conferencias… son algunas de las muchas actividades que se organizan en la Peña Flamenca La Fragua de Bellavista.
+                            Además, esta insigne peña flamenca sevillana organiza el Festival de Flamenco La Fragua desde el año 1976 en el Cortijo del Cuarto, en la barriada que lleva el nombre de la peña, Bellavista. Un festival que todo un referente en el almanaque anual del flamenco en Sevilla, y suele tener lugar cada primer fin de semana del mes de agosto. </p>
+                        <p>
+                            <button class="w3-button w3-light-grey w3-block">Contact</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-third w3-margin-bottom">
+                <div class="w3-card-4">
+                    <div class="w3-container">
+                        <h3>Dirigido</h3>
+                        <p class="w3-opacity">Aqui todos tienen cabida</p>
+                            <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+                                <li class="w3-padding-16">Tipo de público</li>
+                                <li class="w3-padding-16">Amigos</li>
+                                <li class="w3-padding-16">Familiar</li>
+                                <li class="w3-padding-16">Jóvenes</li>
+                                <li class="w3-padding-16">Lgbti</li>
+                                <li class="w3-padding-16">Mayores</li>
+                                <li class="w3-padding-16">Temporada Todo el año</li>
+                            </ul>
+                            <button class="w3-button w3-light-grey w3-block">Contact</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-third w3-margin-bottom">
+                <div class="w3-card-4">
+                    <div class="w3-container">
+                        <h3>Dónde estamos</h3>
+                        <p class="w3-opacity">Información</p>
+                        <p>Calle Gaspar Calderas, 17 (41014 Sevilla) [Bellavista]</p>
+                        <span style="text-decoration-line: overline">Junto Cortijo El Cuarto</span>
+                        <p>tel:+34 954691452</p>
+                        <p>tel:+34 635684132</p>
+                        <p><a href="mailto:lafraguadebellavista@hotmail.com" rel="nofollow" class="action-item email">lafraguadebellavista@hotmail.com</a></p>
+                        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=37.32438,-5.9702" target="_blank" class="directions-link" aria-describedby="audioeye_new_window_message">
+                            Obtener indicaciones
+                        </a>
+                        <p>
+                            <button class="w3-button w3-light-grey w3-block">Contact</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3>Ubicación en Google Maps</h3>
+        <!-- Mapa incrustado -->
+        <div class="w3-container w3-animate-zoom">
+                <a href="https://www.google.com/maps/dir/?api=1&amp;destination=37.32438,-5.9702" target="_blank" class="directions-link" aria-describedby="audioeye_new_window_message">
+                    <img src="/img/ubicacion.png" alt="Click Obtener indicaciones" style="width:100%" />
+                    obtener indicaciones
+                </a>
+        </div>
+
+        <!-- Grid -->
+        <div class="w3-row-padding" id="plans">
+            <div class="w3-center w3-padding-64">
+                <h3>Pricing Plans</h3>
+                <p>Choose a pricing plan that fits your needs.</p>
+            </div>
+
+            <div class="w3-third w3-margin-bottom">
+                <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+                    <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
+                    <li class="w3-padding-16">
+                        <b>10GB</b> Storage
+                    </li>
+                    <li class="w3-padding-16">
+                        <b>10</b> Emails
+                    </li>
+                    <li class="w3-padding-16">
+                        <b>10</b> Domains
+                    </li>
+                    <li class="w3-padding-16">
+                        <b>Endless</b> Support
+                    </li>
+                    <li class="w3-padding-16">
+                        <h2 class="w3-wide">$ 10</h2>
+                        <span class="w3-opacity">per month</span>
+                    </li>
+                    <li class="w3-light-grey w3-padding-24">
+                        <button class="w3-button w3-green w3-padding-large">Sign Up</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="w3-third w3-margin-bottom">
+                <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+                    <li class="w3-dark-grey w3-xlarge w3-padding-32">Pro</li>
+                    <li class="w3-padding-16">
+                        <b>25GB</b> Storage
+                    </li>
+                    <li class="w3-padding-16">
+                        <b>25</b> Emails
+                    </li>
+                    <li class="w3-padding-16">
+                        <b>25</b> Domains
+                    </li>
+                    <li class="w3-padding-16">
+                        <b>Endless</b> Support
+                    </li>
+                    <li class="w3-padding-16">
+                        <h2 class="w3-wide">$ 25</h2>
+                        <span class="w3-opacity">per month</span>
+                    </li>
+                    <li class="w3-light-grey w3-padding-24">
+                        <button class="w3-button w3-green w3-padding-large">Sign Up</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="w3-third w3-margin-bottom">
+                <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+                    <li class="w3-black w3-xlarge w3-padding-32">Premium</li>
+                    <li class="w3-padding-16">
+                        <b>50GB</b> Storage
+                    </li>
+                    <li class="w3-padding-16">
+                        <b>50</b> Emails
+                    </li>
+                    <li class="w3-padding-16">
+                        <b>50</b> Domains
+                    </li>
+                    <li class="w3-padding-16">
+                        <b>Endless</b> Support
+                    </li>
+                    <li class="w3-padding-16">
+                        <h2 class="w3-wide">$ 50</h2>
+                        <span class="w3-opacity">per month</span>
+                    </li>
+                    <li class="w3-light-grey w3-padding-24">
+                        <button class="w3-button w3-green w3-padding-large">Sign Up</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- Contact -->
+        <div class="w3-center w3-padding-64" id="contact">
+            <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Contact Us</span>
+        </div>
+
+        <form class="w3-container" action="/action_page.php" target="_blank">
+            <div class="w3-section">
+                <label>Name</label>
+                <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Name" required />
+            </div>
+            <div class="w3-section">
+                <label>Email</label>
+                <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Email" required />
+            </div>
+            <div class="w3-section">
+                <label>Subject</label>
+                <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Subject" required />
+            </div>
+            <div class="w3-section">
+                <label>Message</label>
+                <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Message" required />
+            </div>
+            <button type="submit" class="w3-button w3-block w3-black">Send</button>
+        </form>
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
+        <h4>Footer</h4>
+        <a href="#" class="w3-button w3-black w3-margin">
+            <i class="fa fa-arrow-up w3-margin-right"></i>To the top
+        </a>
+        <div class="w3-xlarge w3-section">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+        <p>
+            Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a>
+        </p>
+    </footer>
+
+
+    <script>
+        // Slideshow
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function currentDiv(n) {
+            showDivs(slideIndex = n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demodots");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length };
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" w3-white", "");
+            }
+            x[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " w3-white";
+        }
+    </script>
+
+</body>
+</html>
